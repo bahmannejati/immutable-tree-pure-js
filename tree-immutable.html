@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Tree immutable</title>
+    </head>
+    <body>
+
+        <div id="tree"></div>
+
+
+        <script src="./overlay.js"></script>
+        <script src="./store-immutable.js"></script>
+        <script src="./tree-immutable.js"></script>
+        <script src="./tree-visualizer.js"></script>
+        <script src="./tree-bundle.js"></script>
+
+        <script>
+            let treeBundleInstance = treeBundle.createTreeBundle({}, document.getElementById("tree"))
+
+            treeBundleInstance.setData([
+                {
+                    id: 188888555,
+                    title: "item-1",
+                    parentID: null,
+                    // order: 500,
+                },
+                {
+                    id: 7854,
+                    title: "item-1-2",
+                    parentID: 188888555,
+                    // order: 2,
+                },
+                {
+                    id: 114,
+                    title: "item-1-3",
+                    parentID: 188888555,
+                    // order: 3,
+                },
+                {
+                    id: 5412146,
+                    title: "item-1-1",
+                    parentID: 188888555,
+                    // order: 1,
+                },
+                {
+                    id: 2168459845,
+                    title: "item-1-3-1",
+                    parentID: 114,
+                    // order: -100
+                },
+                {
+                    id: 3333333333333,
+                    title: "XXXXX",
+                    parentID: 2168459845,
+                },
+                {
+                    id: 54231354,
+                    title: "item-1-3-2",
+                    parentID: 114,
+                },
+                {
+                    id: 138,
+                    title: "item-3",
+                    parentID: null,
+                    // order: 200,
+                },
+                {
+                    id: 800000,
+                    title: "item-2",
+                    parentID: null,
+                    // order: 300,
+                },
+                {
+                    id: 77777,
+                    title: "item-4",
+                    parentID: null,
+                    // order: 600,
+                },
+                {
+                    id: 189156865,
+                    title: "item-2-1",
+                    parentID: 800000,
+                },
+            ])
+        </script>
+    </body>
+</html>
