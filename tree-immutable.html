@@ -3,18 +3,26 @@
         <title>Tree immutable</title>
     </head>
     <body>
-
-        <div id="tree"></div>
+        
+        <div style="display: flex;">
+            <div style="width: 50%;">
+                <div id="tree"></div>
+            </div>
+            <div>
+                <div id="tree2"></div>
+            </div>
+        </div>
 
 
         <script src="./overlay.js"></script>
-        <script src="./store-immutable.js"></script>
-        <script src="./tree-immutable.js"></script>
+        <script src="./store.js"></script>
+        <script src="./tree-core.js"></script>
         <script src="./tree-visualizer.js"></script>
-        <script src="./tree-bundle.js"></script>
+        <script src="./tree-builder.js"></script>
 
         <script>
             let treeBundleInstance = treeBundle.createTreeBundle({}, document.getElementById("tree"))
+            let treeBundleInstance2 = treeBundle.createTreeBundle({}, document.getElementById("tree2"))
 
             treeBundleInstance.setData([
                 {
